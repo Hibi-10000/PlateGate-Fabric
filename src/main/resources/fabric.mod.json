@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "plategate",
+	"version": "${version}",
+	"name": "PlateGate",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/plategate/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.github.hibi_10000.mods.fabric.PlateGate",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "com.github.hibi_10000.mods.fabric.PlateGateClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"plategate.mixins.json",
+		{
+			"config": "plategate.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.9.24"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
