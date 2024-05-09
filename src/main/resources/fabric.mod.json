@@ -3,15 +3,15 @@
 	"id": "plategate",
 	"version": "${version}",
 	"name": "PlateGate",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "PlateGate for Fabric!",
 	"authors": [
-		"Me!"
+		"Hibi_10000"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/Hibi-10000/PlateGate-Fabric",
+		"sources": "https://github.com/Hibi-10000/PlateGate-Fabric"
 	},
-	"license": "CC0-1.0",
+	"license": "MPL-2.0",
 	"icon": "assets/plategate/icon.png",
 	"environment": "*",
 	"entrypoints": {
