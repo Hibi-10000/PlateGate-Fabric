@@ -8,12 +8,11 @@ insert_final_newline = true
 [*.bat]
 end_of_line = crlf
 
-[*.{java,xml}]
+[*.{kt,kts,java,json}]
 indent_style = space
-
-[*.java]
 indent_size = 4
 
 [.idea/**/*.xml]
+indent_style = space
 indent_size = 2
 insert_final_newline = false

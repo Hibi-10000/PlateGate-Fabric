@@ -1,48 +1,48 @@
 {
-	"schemaVersion": 1,
-	"id": "plategate",
-	"version": "${version}",
-	"name": "PlateGate",
-	"description": "PlateGate for Fabric!",
-	"authors": [
-		"Hibi_10000"
-	],
-	"contact": {
-		"homepage": "https://github.com/Hibi-10000/PlateGate-Fabric",
-		"sources": "https://github.com/Hibi-10000/PlateGate-Fabric"
-	},
-	"license": "MPL-2.0",
-	"icon": "assets/plategate/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			{
-				"value": "com.github.hibi_10000.mods.fabric.PlateGate",
-				"adapter": "kotlin"
-			}
-		],
-		"client": [
-			{
-				"value": "com.github.hibi_10000.mods.fabric.PlateGateClient",
-				"adapter": "kotlin"
-			}
-		]
-	},
-	"mixins": [
-		"plategate.mixins.json",
-		{
-			"config": "plategate.client.mixins.json",
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.20.1",
-		"java": ">=17",
-		"fabric-api": "*",
-		"fabric-language-kotlin": ">=1.9.24"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+    "schemaVersion": 1,
+    "id": "plategate",
+    "version": "${version}",
+    "name": "PlateGate",
+    "description": "PlateGate for Fabric!",
+    "authors": [
+        "Hibi_10000"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Hibi-10000/PlateGate-Fabric",
+        "sources": "https://github.com/Hibi-10000/PlateGate-Fabric"
+    },
+    "license": "MPL-2.0",
+    "icon": "assets/plategate/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            {
+                "value": "com.github.hibi_10000.mods.fabric.PlateGate",
+                "adapter": "kotlin"
+            }
+        ],
+        "client": [
+            {
+                "value": "com.github.hibi_10000.mods.fabric.PlateGateClient",
+                "adapter": "kotlin"
+            }
+        ]
+    },
+    "mixins": [
+        "plategate.mixins.json",
+        {
+            "config": "plategate.client.mixins.json",
+            "environment": "client"
+        }
+    ],
+    "depends": {
+        "fabricloader": ">=0.15.11",
+        "minecraft": "~1.20.1",
+        "java": ">=17",
+        "fabric-api": "*",
+        "fabric-language-kotlin": ">=1.9.24"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
 }

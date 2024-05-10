@@ -1,4 +1,6 @@
 /**/*
+!/codeStyles/
+!/codeStyles/*.xml
 !/dictionaries/
 !/dictionaries/plategate.xml
 !.gitignore
