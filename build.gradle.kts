@@ -24,12 +24,11 @@ repositories {
 }
 
 loom {
-    splitEnvironmentSourceSets()
+    serverOnlyMinecraftJar()
 
     mods {
         create("plategate") {
             sourceSet(sourceSets["main"])
-            sourceSet(sourceSets["client"])
         }
     }
 }

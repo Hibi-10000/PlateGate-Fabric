@@ -20,20 +20,10 @@
                 "value": "com.github.hibi_10000.mods.fabric.PlateGate",
                 "adapter": "kotlin"
             }
-        ],
-        "client": [
-            {
-                "value": "com.github.hibi_10000.mods.fabric.PlateGateClient",
-                "adapter": "kotlin"
-            }
         ]
     },
     "mixins": [
-        "plategate.mixins.json",
-        {
-            "config": "plategate.client.mixins.json",
-            "environment": "client"
-        }
+        "plategate.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=0.15.11",
