@@ -1,3 +1,5 @@
+rootProject.name = "PlateGate-Fabric"
+
 pluginManagement {
     repositories {
         maven {

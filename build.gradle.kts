@@ -13,8 +13,6 @@ java.sourceCompatibility = JavaVersion.VERSION_17
 java.targetCompatibility = JavaVersion.VERSION_17
 kotlin.compilerOptions.jvmTarget.set(JvmTarget.JVM_17)
 
-base.archivesName.set(project.properties["archives_base_name"] as String)
-
 repositories {
     // Add repositories to retrieve artifacts from in here.
     // You should only use this when depending on other mods because
@@ -34,7 +32,7 @@ loom {
 }
 
 dependencies {
-    // To change the versions see the gradle.properties file
+    // To change the versions, see the gradle.properties file
     minecraft("com.mojang:minecraft:${project.properties["minecraft_version"]}")
     mappings("net.fabricmc:yarn:${project.properties["yarn_mappings"]}:v2")
     modImplementation("net.fabricmc:fabric-loader:${project.properties["loader_version"]}")
@@ -58,15 +56,6 @@ tasks {
     }
 
     jar {
-        from("LICENSE.txt") {
-            rename { "${it}_${project.base.archivesName.get()}" }
-        }
+        from("LICENSE.txt")
     }
-}
-
-java {
-    // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-    // if it is present.
-    // If you remove this line, sources will not be generated.
-    withSourcesJar()
 }
