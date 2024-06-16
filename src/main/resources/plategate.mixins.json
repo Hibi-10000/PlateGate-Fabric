@@ -3,7 +3,6 @@
     "package": "com.github.hibi_10000.mods.fabric.mixin",
     "compatibilityLevel": "JAVA_17",
     "mixins": [
-        "ExampleMixin",
         "LiteralCommandNodeMixin"
     ],
     "injectors": {
