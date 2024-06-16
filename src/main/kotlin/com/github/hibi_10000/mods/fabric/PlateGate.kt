@@ -4,6 +4,7 @@
 
 package com.github.hibi_10000.mods.fabric
 
+import com.github.hibi_10000.mods.fabric.commands.PlateGateCommand
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
 
@@ -15,5 +16,6 @@ object PlateGate : ModInitializer {
         // However, some things (like resources) may still be uninitialized.
         // Proceed with mild caution.
         logger.info("Hello Fabric world!")
+        PlateGateCommand.register()
     }
 }
