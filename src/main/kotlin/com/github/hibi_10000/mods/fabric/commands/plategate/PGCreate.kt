@@ -4,7 +4,7 @@
 
 package com.github.hibi_10000.mods.fabric.commands.plategate
 
-import com.github.hibi_10000.mods.fabric.commands.alias.LiteralAliasCommandNode
+import com.github.hibi_10000.mods.fabric.LiteralCommandNodeAlias
 import com.mojang.brigadier.Command
 import com.mojang.brigadier.arguments.StringArgumentType
 import com.mojang.brigadier.context.CommandContext
@@ -22,8 +22,7 @@ object PGCreate {
         val source = context.source
         val sourceP = source.playerOrThrow
         val name = StringArgumentType.getString(context, "name")
-        //val alias = (context.rootNode as LiteralCommandNodeAlias).`plateGate$getAlias`()
-        val alias = (context.rootNode as LiteralAliasCommandNode).alias
+        val alias = (context.rootNode as LiteralCommandNodeAlias).`plateGate$getAlias`()
         context.source.sendFeedback({ Text.literal("Called /$alias create $name") }, true)
         return Command.SINGLE_SUCCESS
     }
