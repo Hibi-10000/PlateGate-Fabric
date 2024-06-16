@@ -4,9 +4,10 @@
 
 package com.github.hibi_10000.mods.fabric.commands
 
+import com.github.hibi_10000.mods.fabric.commands.alias.LiteralAliasArgumentBuilder
+import com.github.hibi_10000.mods.fabric.commands.alias.LiteralAliasCommandNode
 import com.github.hibi_10000.mods.fabric.commands.plategate.PGCreate
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback
-import net.minecraft.server.command.CommandManager.literal
 import net.minecraft.server.command.ServerCommandSource
 
 object PlateGateCommand {
@@ -17,9 +18,13 @@ object PlateGateCommand {
     internal fun register() {
         CommandRegistrationCallback.EVENT.register { dispatcher, _, _ ->
             val commandNode = dispatcher.register(PlateGateCommandLiteral)
-            dispatcher.register(literal("plategate:pg").requires(perm).redirect(commandNode))
-            dispatcher.register(literal("plategate")   .requires(perm).redirect(commandNode))
-            dispatcher.register(literal("pg")          .requires(perm).redirect(commandNode))
+            dispatcher.register(literal("plategate:pg").requires(perm).alias(commandNode as LiteralAliasCommandNode))
+            dispatcher.register(literal("plategate")   .requires(perm).alias(commandNode))
+            dispatcher.register(literal("pg")          .requires(perm).alias(commandNode))
         }
+    }
+
+    private fun literal(literal: String?): LiteralAliasArgumentBuilder<ServerCommandSource> {
+        return LiteralAliasArgumentBuilder(literal)
     }
 }
