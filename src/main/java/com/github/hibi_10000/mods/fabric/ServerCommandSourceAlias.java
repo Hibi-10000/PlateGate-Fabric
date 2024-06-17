@@ -4,7 +4,7 @@
 
 package com.github.hibi_10000.mods.fabric;
 
-public interface LiteralCommandNodeAlias {
+public interface ServerCommandSourceAlias {
     void plateGate$setAlias(String alias);
     String plateGate$getAlias();
 }
