@@ -11,13 +11,14 @@ import net.minecraft.server.command.CommandManager.literal
 import net.minecraft.server.command.ServerCommandSource
 
 object PlateGateCommand {
-    private val alias = { source: ServerCommandSource, alias: String ->
-        (source as ServerCommandSourceAlias).`plateGate$setAlias`(alias)
-        source
-    }
     private val perm = { source: ServerCommandSource -> source.hasPermissionLevel(2) }
     private val PlateGateCommandLiteral = literal("plategate:plategate").requires(perm)
         .then(PGCreate.CommandLiteral)
+
+    private fun alias(source: ServerCommandSource, alias: String): ServerCommandSource {
+        (source as ServerCommandSourceAlias).`plateGate$setAlias`(alias)
+        return source
+    }
 
     internal fun register() {
         CommandRegistrationCallback.EVENT.register { dispatcher, _, _ ->
